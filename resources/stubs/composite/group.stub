@@ -1,0 +1,27 @@
+<?php
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\interfaces\DummyImp;
+
+class Group
+{
+    protected $items=[];
+
+    public function __construct()
+    {
+    }
+
+    public function addItem(DummyImp $item)
+    {
+        //todo: customize item
+        $this->items[] = $item->getItem();
+    }
+
+    public function getItems()
+    {
+        //todo: customize group
+        return $this->items;
+    }
+}

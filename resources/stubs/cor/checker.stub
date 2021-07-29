@@ -1,0 +1,24 @@
+<?php
+
+
+namespace DummyNamespace;
+
+use App\DummyPath\DummyUse\StatusManager;
+
+abstract class Checker
+{
+    protected $successor;
+
+    abstract public function check(StatusManager $status);
+
+    public function succeedWith(Checker $success)
+    {
+        $this->successor = $success;
+    }
+
+    public function next(StatusManager $status)
+    {
+        if (isset($this->successor))
+            $this->successor->check($status);
+    }
+}

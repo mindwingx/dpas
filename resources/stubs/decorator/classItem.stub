@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\interfaces\DummyImp;
+//use App\Models\DummyModel;
+
+class DummyName implements DummyImp
+{
+    private $item;
+
+    public function __construct(DummyUseInterface $item)
+    {
+        $this->item = $item;
+    }
+
+    public function example(){
+        return $this->item->example() . "update method for current item.";
+    }
+}

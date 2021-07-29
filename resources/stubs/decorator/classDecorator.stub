@@ -1,0 +1,30 @@
+<?php
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\interfaces\DummyImp;
+use App\DummyPath\DummyUse\classes\DummyNameBase;
+use App\DummyPath\DummyUse\classes\DummyNameItemOne;
+use App\DummyPath\DummyUse\classes\DummyNameItemTwo;
+//use App\Models\DummyModel;
+
+class DummyName implements DummyImp
+{
+    public function __construct()
+    {
+    }
+
+    public function example()
+    {
+        //todo: handle items as needed in your service
+        $base = new DummyNameBase();
+        $itemOne = new DummyNameItemOne($base);
+        $itemTwo = new DummyNameItemTwo($base);
+
+        return [
+            $itemOne->example(),
+            $itemTwo->example(),
+        ];
+    }
+}

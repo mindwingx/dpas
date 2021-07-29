@@ -1,0 +1,13 @@
+<?php
+
+namespace DummyNamespace;
+
+
+abstract class DummyName
+{
+    public $itemOne,$itemTwo;//todo: add more related property as needed
+
+    public function __construct(){
+
+    }
+}

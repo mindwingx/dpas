@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Providers\Custom;
+
+use App\DummyPath\DummyName\classes\FirstStrategy;
+use App\DummyPath\DummyName\classes\SecondStrategy;
+use App\DummyPath\DummyName\interfaces\DummyContract;
+use Illuminate\Support\ServiceProvider;
+
+class DummyNameServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton(DummyContract::class, function ($app) {
+            //todo: update below code according to your service
+            /*switch ($app->make('config')->get('your-api-or-3rd-part-config')) {
+                case 'Client' :
+                    return new FirstStrategy;
+                case 'API':
+                    return new SecondStrategy;
+                default :
+                    throw new \RuntimeException("Unknown service.");
+            }*/
+        });
+    }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+}

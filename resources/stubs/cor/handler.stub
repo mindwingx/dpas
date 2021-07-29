@@ -1,0 +1,27 @@
+<?php
+
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\classes\ItemOne;
+
+class DummyName
+{
+    private function __construct()
+    {
+    }
+
+    //todo: rename ItemOne to needed class or add more classes to chain
+    public static function example()
+    {
+        $itemOne = new ItemOne();
+
+        $itemOne->succeedWith($itemOne);
+        //todo: add more chain classes here to complete chaining steps
+
+        $itemOne->check(new StatusManager());
+
+        return response(['msg' => 'Your item done successfully.'], 200);
+    }
+}
