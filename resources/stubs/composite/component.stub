@@ -1,0 +1,24 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\DummyPath\DummyUse\classes\Group;
+use App\DummyPath\DummyUse\classes\Item;
+use App\DummyPath\DummyUse\interfaces\DummyImp;
+
+class DummyName implements DummyImp
+{
+    public function __construct()
+    {
+        //
+    }
+
+    public function render()
+    {
+        $group = new Group();
+        $group->addItem(new Item('example item one'));
+        $group->addItem(new Item('example item two'));
+
+        return $group->getItems();
+    }
+}

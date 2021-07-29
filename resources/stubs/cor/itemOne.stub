@@ -1,0 +1,21 @@
+<?php
+
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\classes\Checker;
+use App\DummyPath\DummyUse\StatusManager;
+
+class DummyName extends Checker
+{
+    public function check(StatusManager $status)
+    {
+        //todo: update below code to needed service
+        /*if (!$status->itemOne) {
+            throw new \Exception('Your item is not supported!');
+        }
+
+        $this->next($status);*/
+    }
+}

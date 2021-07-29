@@ -1,0 +1,11 @@
+<?php
+
+
+namespace {{namespace}};
+
+
+interface DummyContract
+{
+    //todo: add contracts here
+    public function example();
+}

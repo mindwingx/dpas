@@ -1,0 +1,15 @@
+<?php
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\classes\DummyUse;
+//use App\Models\DummyModel;
+
+class DummyName extends DummyUse
+{
+    public function __construct()
+    {
+
+    }
+}

@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Providers\Custom;
+
+use Illuminate\Support\ServiceProvider;
+use App\DummyPath\DummyName\interfaces\DummyNameInterface;
+use App\DummyPath\DummyName\DummyName;
+
+class DummyNameServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton(DummyNameInterface::class,DummyName::class);
+    }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+}

@@ -1,0 +1,22 @@
+<?php
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\interfaces\DummyImp;
+
+class Item
+{
+    protected $item;
+
+    public function __construct($value)
+    {
+        $this->item = $value;
+    }
+
+    public function getItem()
+    {
+        //todo: customize item
+        return $this->item;
+    }
+}

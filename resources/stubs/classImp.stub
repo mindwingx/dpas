@@ -1,0 +1,15 @@
+<?php
+
+namespace DummyNamespace;
+
+
+use App\DummyPath\DummyUse\interfaces\DummyImp;
+//use App\Models\DummyModel;
+
+class DummyName implements DummyImp
+{
+    public function __construct()
+    {
+
+    }
+}
