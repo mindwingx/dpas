@@ -10,7 +10,8 @@ Via Composer
 $ composer require mindwingx/dpas --dev
 ```
 
-## Usage
+### Usage
+
 Assume that you know all about design patterns, You can implement design patterns skeleton as a service and serve it as
 a custom service provider.
 
@@ -25,15 +26,35 @@ a custom service provider.
 - Chain of Responsibility
 - Strategy
 
-## Security
+### Commands
+
+- Create new service
+
+``` bash
+php artisan dpas:new <service-name>
+```
+
+- Add eloquent model to service classes
+
+``` bash
+php artisan dpas:new <service-name> -m=<model-name>
+```
+
+- Customize base path name of service(default path is 'Service')
+
+``` bash
+php artisan dpas:new <service-name> -p=<base-path-name>
+```
+
+### Security
 
 If you discover any security related issues, please email milad.rg@gmail.com instead of using the issue tracker.
 
-## Credits
+### Credits
 
 - [Milad Roudgarian][link-author]
 
-## License
+### License
 
 MIT. Please see the [license file](license.md) for more information.
 
