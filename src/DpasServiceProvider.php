@@ -60,9 +60,14 @@ class DpasServiceProvider extends ServiceProvider
      */
     protected function bootForConsole()
     {
+        /*check application is lumen or laravel and lumen version 8 and more*/
+        $config = strpos(app()->version(), 'lumen') == false
+            ? config_path('dpas.php')
+            : base_path('config/dpas.php');
+
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__ . '/../config/dpas.php' => config_path('dpas.php'),
+            __DIR__ . '/../config/dpas.php' => $config,
         ], 'dpas.config');
 
         // Publishing the views.
